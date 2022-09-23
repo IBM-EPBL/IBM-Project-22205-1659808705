@@ -6,12 +6,12 @@
           <body>
           <form method="get" action="form2.php">
                    <table align="center" height="100%" width="100%" border="2">
-                   <tr height="20%">
+                   <tr height="22%">
 <td colspan="3"><center><h1><b>Registration form</b></h1></center></td>
                    </tr>
-                   <tr height="60%">
-                             <td width="20%">&nbsp;</td>
-                             <td width="60%">
+                   <tr height="65%">
+                             <td width="22%">&nbsp;</td>
+                             <td width="58%">
                                       <table align="center" height="100%">
                                                 <th>name:</th>
                                                 <td>
