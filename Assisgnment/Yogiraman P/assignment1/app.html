@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Title</title>
+	<link rel="stylesheet" href="table.css">
+</head>
+<body>
+    <marquee><U>PLEASE ENTER THE DATA</U></marquee>
+
+	<center>
+		<table border="4">
+			<thead>
+				<tr>
+					<th>First Name</th>
+					<td><input type="text" name="fname" id="fname"></td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th>Last Name</th>
+					<td><input type="text" name="lname" id="lname"></td>
+				</tr>
+                <tr>
+					<th>Gender</th>
+					<td><input type="radio" name="gender" id="gender" value="None">None
+                        <input type="radio" name="gender" id="gender" value="Male">Male
+                        <input type="radio" name="gender" id="gender" value="Female">Female
+                        <input type="radio" name="gender" id="gender" value="Others">Others</td>
+                        
+				</tr>
+                <tr>
+					<th>Department</th>
+					<td><select name="DEPT" id="dept">
+                        <option  value="NONE">NONE</option>
+                        <option  value="CSE">CSE</option>
+                        <option  value="IT">IT</option>
+                        <option  value="ECE">ECE</option>
+                        <option  value="EEE">EEE</option>
+                        <option  value="CIVIL">CIVIL</option>
+                        <option  value="MECHANICAL">MECHANICAL</option>
+                    </select></td>
+				</tr>
+                
+				<tr>
+					<th>Email</th>
+					<td><input type="email" name="email" id="email"></td>
+				</tr>
+                <tr>
+					<th>Password</th>
+					<td><input type="password" name="password" id="password"></td>
+				</tr>
+                <tr>
+					<th>Age</th>
+					<td><input type="text" name="age" id="age"></td>
+				</tr>
+                <tr>
+					<th>Address</th>
+					<td><textarea id="address"></textarea></td>
+				</tr>
+                
+				<tr id="btna">
+					<td colspan="2"><input type="button" name="button" id="btn" value="Add" onclick="AddRow()"></td>
+				</tr>
+                <tr>
+                    <td ><a href="2.html" target="_default"><button >SUBMIT</button>
+                    </td>
+                </tr>
+			</tbody>
+		</table>
+
+		<table border="4" id="show">
+			<thead>
+				<tr>
+					<th>First Name</th>
+					<th>Last Name</th>
+                    <th>Gender</th>
+                    <th>Department</th>
+					<th>Email</th>
+                    <th>Password</th>
+					<th>Age</th>
+                    <th>Address</th>
+                    
+				</tr>
+			</thead>
+		</table>
+	</center>
+
+	<script>
+
+		var list1 = [];
+		var list2 = [];
+		var list3 = [];
+		var list4 = [];
+        var list5 = [];
+        var list6 = [];
+        var list7 = [];
+        var list8 = [];
+
+		var n = 1;
+		var x = 0;
+
+		function AddRow(){
+
+			var AddRown = document.getElementById('show');
+			var NewRow = AddRown.insertRow(n);
+
+			list1[x] = document.getElementById("fname").value;
+			list2[x] = document.getElementById("lname").value;
+            list3[x] = document.getElementById("gender").value;
+            list4[x] = document.getElementById("dept").value
+			list5[x] = document.getElementById("email").value;
+            list6[x] = document.getElementById("password").value;
+            list7[x] = document.getElementById("age").value;
+            list8[x] = document.getElementById("address").value;
+            
+
+			var cel1 = NewRow.insertCell(0);
+			var cel2 = NewRow.insertCell(1);
+			var cel3 = NewRow.insertCell(2);
+			var cel4 = NewRow.insertCell(3);
+            var cel5 = NewRow.insertCell(4);
+            var cel6 = NewRow.insertCell(5);
+            var cel7 = NewRow.insertCell(6);
+            var cel8 = NewRow.insertCell(7);
+
+			cel1.innerHTML = list1[x];
+			cel2.innerHTML = list2[x];
+			cel3.innerHTML = list3[x];
+			cel4.innerHTML = list4[x];
+            cel5.innerHTML = list5[x];
+            cel6.innerHTML = list6[x];
+            cel7.innerHTML = list7[x];
+            cel8.innerHTML = list8[x];
+ 
+
+			n++;
+			x++;
+		}
+
+	</script>
+</body>
+</html>
