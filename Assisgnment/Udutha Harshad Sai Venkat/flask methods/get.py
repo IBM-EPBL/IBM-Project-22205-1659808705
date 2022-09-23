@@ -6,7 +6,7 @@ app = Flask(__name__)
 def login():  
       uname=request.args.get('uname')  
       passwrd=request.args.get('pass')  
-      if uname=="ayush" and passwrd=="google":  
+      if uname=="harsha" and passwrd=="ifet":  
           return "Welcome %s" %uname  
    
 if __name__ == '__main__':  
