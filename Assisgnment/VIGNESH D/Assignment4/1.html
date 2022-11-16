@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1 style="text-align: center;">greetings</h1>
+    <h1>  {% block title %} <span style="color: rgb(30, 28, 28);">Enter the query</span> {% endblock %}</h1>
+    {% for message in messages %}
+        <div class='message'>
+            <h3><span style="color: rgb(142, 184, 27);">TITLE : </span> {{ message['title'] }}</h3>
+            <p><span style="color: rgb(71, 185, 74);">MESSAGE : </span>{{ message['Message'] }}</p>
+            <p><span style="color: rgb(71, 185, 74);">EMAIL : </span>{{ message['Email'] }}</p>
+            <p><span style="color: rgb(71, 185, 74);">PHONE : </span>{{ message['Phone'] }}</p>
+            <p><span style="color: rgb(71, 185, 74);">QUERY : </span>{{ message['Query'] }}</p>
+            <p><span style="color: rgb(71, 185, 74);">MINFO : </span>{{ message['MINFO'] }}</p>
+            <p><span style="color: rgb(71, 185, 74);">OCUUPATION : </span>{{ message['Occupation'] }}</p>
+            <p><span style="color: rgb(71, 185, 74);">DOB : </span>{{ message['DOB'] }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}
